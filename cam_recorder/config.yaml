@@ -1,0 +1,27 @@
+name: "Camera Recorder"
+version: "0.1.0"
+slug: cam_recorder
+description: "Record RTSP cameras in segments, mirror to Google Drive, keep 72h"
+arch: [aarch64, amd64]
+init: false
+startup: services
+boot: auto
+map:
+  - media:rw
+  - addon_config:rw
+options:
+  cameras: []
+  retention_hours: 72
+  segment_seconds: 600
+  drive_remote: "gdrive"
+  drive_path: "HomeCameras"
+  upload_interval_seconds: 300
+schema:
+  cameras:
+    - name: str
+      url: password
+  retention_hours: int(1,)
+  segment_seconds: int(60,)
+  drive_remote: str
+  drive_path: str
+  upload_interval_seconds: int(60,)

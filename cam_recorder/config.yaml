@@ -1,5 +1,5 @@
 name: "Camera Recorder"
-version: "0.1.0"
+version: "0.1.1"
 slug: cam_recorder
 description: "Record RTSP cameras in segments, mirror to Google Drive, keep 72h"
 arch: [aarch64, amd64]
